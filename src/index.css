@@ -1,0 +1,240 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('background.png');
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  font-size: 2em;
+  cursor: pointer;
+  color: #fff;
+  position: fixed;
+  top: 20px; 
+  left: 20px; 
+}
+
+#menu:hover {
+  color: #ffd3c0;
+}
+
+#sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(to right, #ff7e9e, #ffcc6f);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#sidenav p {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+#sidenav a {
+  text-align: center;
+  padding: 32px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #65387e;
+  display: block;
+  transition: 0.3s;
+}
+
+#sidenav a:hover {
+  color: #fff;
+  font-size: 1.8em;
+}
+
+#sidenav a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+#sidenav a:hover::after {
+  width: 50%;
+}
+
+#sidenav #closebtn {
+  position: absolute;
+  color: #fff;
+  top: 0px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+#sidenav #closebtn:hover {
+  color: #ffd3c0;
+  font-size: 40px;
+}
+
+header {
+  background-color: #ff7e9e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 36px; 
+  text-align: center;
+  font-weight: bold; 
+  color: #ffffff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 20px;
+}
+
+.search-form {
+  background-color: #fff;
+  padding: 15px; 
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  float: right;
+  width: 250px; 
+}
+
+#brand {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.price-rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-inputs,
+.rating-inputs {
+  width: 48%; 
+}
+
+.label-input-group {
+  margin-bottom: 12px;
+}
+
+.label-input-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.label-input-group input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+select,
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px; 
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ff7e9e;
+  color: #fff;
+  padding: 12px 0; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%; 
+}
+
+.filled-star {
+  color: yellow; 
+  text-shadow: 0 0 2px black;
+  padding: 0 2px;
+}
+
+.empty-star {
+  color: rgb(255, 255, 255); 
+  text-shadow: 0 0 2px black; 
+  padding: 0 2px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px; 
+}
+
+.product-item {
+  width: 200px; 
+  margin: 10px; 
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+
+.product-details-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.product-details-popup .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+
+.order-button {
+  background-color: #ff7e9e;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+

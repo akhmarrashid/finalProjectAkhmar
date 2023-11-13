@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeautyBrowse</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<script>
+  function openNav()
+  {
+      document.getElementById("sidenav").style.width = "250px"; 
+  }
+
+  function closeNav()
+  {
+      document.getElementById("sidenav").style.width = "0px"; 
+  }
+</script>
+<body>
+    <header>
+        <h1>BeautyBrowse</h1>
+    </header>
+    <nav>
+        <span id="menu" onclick="openNav()">&#9776;</span>
+        <div id="sidenav">
+            <span id="closebtn" onclick="closeNav()">&times;</span>
+  
+            <p>MENU</p>
+            <a href="index.html">HOME</a>
+            <a href="crud.html">MY FAVORITES</a>
+        </div>
+    </nav>
+
+    <div class="search-form">
+        <label for="brand">Brand:</label>
+        <select id="brand">
+            <option value="" disabled selected>Loading Brands...</option>
+            <option value="">All Brands</option>
+        </select>
+
+        <label for = "productType">Product Type:</label>
+        <select id="productType">
+          <option value="" disabled selected>Loading Product Types...</option>
+          <option value="">All Product Types</option>
+        </select>
+
+        <label for="category">Category:</label>
+        <select id="category">
+            <option value="" disabled selected>Loading Categories...</option>
+            <option value="">All Categories</option>
+        </select>
+
+        <div class="price-rating-container label-input-group">
+            <div class="price-inputs">
+              <label for="minPrice">Min Price:</label>
+              <input type="number" id="minPrice">
+            </div>
+            <div class="price-inputs">
+              <label for="maxPrice">Max Price:</label>
+              <input type="number" id="maxPrice">
+            </div>
+          </div>
+          
+          <div class="price-rating-container label-input-group">
+            <div class="rating-inputs">
+              <label for="minRating">Min Rating:</label>
+              <input type="number" id="minRating">
+            </div>
+            <div class="rating-inputs">
+              <label for="maxRating">Max Rating:</label>
+              <input type="number" id="maxRating">
+            </div>
+          </div>
+
+        <button id="searchButton">Search</button>
+    </div>
+
+    <div class="product-list">
+        <!--Display product information-->
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
